@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <label for="file">Enter the Number Of Forms:</label>
+    <input type="number" id="inid" value="" />
+    <input type="button" id="btnid" value="Click" />
+    <div id="tid" class="row"></div>
+
+    <script>
+      document.getElementById("btnid").addEventListener(
+        "click",
+        (demo = () => {
+          let val = document.getElementById("inid").value;
+          for (let i = 0; i < val; i++) {
+            let tab = document.getElementById("tid");
+            let div1 = document.createElement("div");
+            div1.setAttribute("class","col-lg-3 col-md-4 col-sm-6 d-flex flex-column")
+            let label1 = document.createElement("label");
+            let txt = document.createTextNode("Username");
+            label1.appendChild(txt);
+            let input1 = document.createElement("input");
+            label1.appendChild(input1);
+            div1.appendChild(label1);
+            let label2 = document.createElement("label");
+            let txt1 = document.createTextNode("Password");
+            label2.appendChild(txt1);
+            let input2 = document.createElement("input");
+            label2.appendChild(input2);
+            div1.appendChild(label2);
+            tab.appendChild(div1);
+          }
+        })
+      );
+    </script>
+  </body>
+</html>
